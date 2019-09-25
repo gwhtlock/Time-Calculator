@@ -15,7 +15,7 @@ public class Main {
 
 
     public static int remainingMinutes(int minutes){
-        return minutes;
+        return minutes%60;
     }
 
 
@@ -60,7 +60,7 @@ public class Main {
                 extraHour = minutes /60;
                 totalHours+=extraHour;
 
-                totalMinutes+=(minutes%60);
+                totalMinutes+= remainingMinutes(minutes);
             }else{
 
                 if(minutes>=0) {
@@ -74,7 +74,7 @@ public class Main {
                 totalHours+=extraHour;
 
 
-                totalMinutes =(totalMinutes%60);
+                totalMinutes =remainingMinutes(totalMinutes);
 
 
             }
