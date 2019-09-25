@@ -14,6 +14,11 @@ public class Main {
     }
 
 
+    public static int remainingMinutes(int minutes){
+        return minutes;
+    }
+
+
 
     public static String addTime(){
 
