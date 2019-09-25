@@ -18,11 +18,15 @@ public class Main {
         return minutes%60;
     }
 
+    public static int extraHour(int minutes){
+        return minutes/60;
+    }
+
 
 
     public static String addTime(){
 
-        int extraHour = 0;
+//        int extraHour = 0;
         int totalHours = 0;
         int totalMinutes = 0;
         int hours;
@@ -57,8 +61,9 @@ public class Main {
             totalHours += hours;
 
             if((minutes >=60)){
-                extraHour = minutes /60;
-                totalHours+=extraHour;
+//                extraHour = minutes /60;
+//                totalHours+=extraHour;
+                totalHours+=extraHour(minutes);
 
                 totalMinutes+= remainingMinutes(minutes);
             }else{
@@ -70,8 +75,9 @@ public class Main {
 
             if(totalMinutes >=60){
 
-                extraHour = totalMinutes /60;
-                totalHours+=extraHour;
+//                extraHour = totalMinutes /60;
+//                totalHours+=extraHour;
+                totalHours+=extraHour(totalMinutes);
 
 
                 totalMinutes =remainingMinutes(totalMinutes);
